@@ -1,0 +1,20 @@
+@import './components/container.scss';
+@import './components/card.scss';
+@import './sections/navbar.scss';
+@import './sections/hero.scss';
+@import './sections/highscore.scss';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(90deg, #56ccf2 0%, #2f80ed 100%);
+    // background-color: red;
+    backdrop-filter: blur(5px);
+    color: #333;
+    min-width: 375px;
+}

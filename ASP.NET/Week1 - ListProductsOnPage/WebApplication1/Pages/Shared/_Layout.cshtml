@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DBP Develop - @ViewData["Title"]</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebApplication1.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <nav class="links">
+                <a asp-page="/Index">Home</a>
+                <a asp-page="/Products">Products</a>
+            </nav>
+        </header>
+
+        <main>
+            @RenderBody()
+        </main>
+
+        <footer>
+            <p>&copy; 2025 DBP Develop</p>
+        </footer>
+    </div>
+   
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

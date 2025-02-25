@@ -1,0 +1,38 @@
+﻿
+img {
+  width: 220px;
+  height: 220px;
+  top:0;
+}
+
+.product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  height: 200px;
+  overflow:hidden;
+  transition: all 1s;
+  &:hover{
+           scale:1.05;
+           cursor:pointer;
+         }
+}
+
+.relavite {
+  position: absolute;
+  p, h2{
+    color: hotpink;
+  }
+&:hover {
+    p, h2{
+      color: transparent;
+    }
+  }
+}

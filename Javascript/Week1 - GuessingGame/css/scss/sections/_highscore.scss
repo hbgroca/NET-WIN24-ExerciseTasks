@@ -1,0 +1,16 @@
+.highscores{
+    margin-top: 2rem;;
+    opacity: 0;
+    transition: all 0.7s;
+    position: relative;
+}
+.platsilistan{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    padding: .5rem 1.5rem;
+
+    font-size: small;
+    color: rgba(0, 0, 0, 0.401);
+}

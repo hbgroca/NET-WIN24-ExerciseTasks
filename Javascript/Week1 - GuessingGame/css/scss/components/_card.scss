@@ -1,0 +1,281 @@
+.card-guesses{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 0;
+    transition: all 0.3s;
+    h4{
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    ul{
+        list-style: none;
+        margin: 10px 0;
+        li{
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        // @media (max-width: 572px){
+        //     display: flex;
+        //     flex-direction: row;
+        //     align-items: center;
+        //     li{
+        //         font-size: 1rem;
+        //         margin: 0px 4px;
+        //         &::after{
+        //             content: ',';
+        //         }
+        //         &:last-child{
+        //             &::after{
+        //                 content: '';
+        //             }
+        //         }
+        //     }
+        // }
+    }
+    @media (max-width: 572px){
+        // position: absolute;
+        // top: 445px;
+        h4{
+            display: none;
+        }
+    }
+}
+
+.card-inputside{
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 0;
+    transition: all 0.3s;
+    .keypad{
+        width: 200px;
+    }
+    h4{
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    input{
+        padding: 0.5rem;
+        border-radius: 4px;
+        font-size: 1rem;
+        margin: 0.5rem;
+        width: 90%;
+    }
+    span{
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+    button{
+        padding: 0.75rem 1rem;
+        border-radius: 4px;
+        font-size: 1.2rem;
+        margin: 0.5rem;
+        cursor: pointer;
+    }
+    #keypad-lower{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin: 0.15rem;
+    }
+    #Enter{
+        padding: 0.75rem 0rem ;
+    }
+}
+
+.card-fail{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    scale: 0;
+    min-width: 272px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 0;
+    transition: all 0.3s;
+    h4{
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    p{
+        font-size: 1.2rem;
+        margin: 10px 0;
+    }
+    button{
+        padding: 0.75rem 1rem;
+        border-radius: 4px;
+        font-size: 1.2rem;
+        margin: 0.5rem;
+        cursor: pointer;
+    }
+}
+
+.card-win{
+    background-image: url('../../../image/konfetti.gif');
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    scale: 0;
+    min-width: 272px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 0;
+    transition: all 0.3s;
+    h4{
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    p{
+        font-size: 1.2rem;
+        margin: 10px 0;
+    }
+    button{
+        padding: 0.75rem 1rem;
+        border-radius: 4px;
+        font-size: 1.2rem;
+        margin: 0.5rem;
+        cursor: pointer;
+    }
+    .card-win-correctAnswer{
+        font-size: 3rem;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+}
+
+.card-highscore{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 0;
+    transition: all 0.3s;
+    ul{
+        list-style: decimal;
+        margin: 10px 0;
+        li{
+            font-size: 1.2rem;
+            margin: 5px 0;
+        }
+    }
+    h4{
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    p{
+        font-size: 1.2rem;
+        margin: 10px 0;
+    }
+    button{
+        padding: 0.75rem 1rem;
+        border-radius: 4px;
+        font-size: 1.2rem;
+        margin: 0.5rem;
+        cursor: pointer;
+    }
+    .card-highscore-list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0;
+        ul{
+            list-style: none;
+            li{
+                font-size: 1.2rem;
+                margin: 5px 0;
+            }
+        }
+    }
+}
+
+.blur-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card-newhighscore{
+    position: absolute;
+    top: 25%;
+    width: 50%;
+    z-index: 2500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    gap: 1rem;
+    background-color: #fff;
+    background-image: url('../../../image/konfetti.gif');
+    border: 1px solid ;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    padding: 1rem;
+
+    input{
+        padding: 0.5rem;
+        border-radius: 4px;
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 0.5rem;
+        width: 90%;
+        text-align: center;
+    }
+    div{
+        button{
+            padding: 0.75rem 1rem;
+            border-radius: 4px;
+            font-size: 1.2rem;
+            margin: 0.5rem;
+            cursor: pointer;
+
+            &:nth-child(1){
+                background-color: tomato;
+            }
+            &:nth-last-child(1){
+                background-color: lightgreen;
+            }
+        }
+        @media (max-width: 495px){
+            
+           button{
+            padding: 0.75rem 0.05rem;
+        }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+﻿@model Product
+
+
+
+<div class="product">
+
+    @if (!string.IsNullOrEmpty(Model.Imgadress))
+    {
+        <img class="relavite" src="@Model.Imgadress" />
+        <div class="relavite">
+            <h2>@Model.Name</h2>
+            <p>@Model.Price kr</p>
+            <p>Produktnummer: @Model.Id</p>
+        </div>
+    }
+    else
+    {
+        <div class="product-info">
+            <h2>@Model.Name</h2>
+            <p>@Model.Price kr</p>
+            <p>Produktnummer: @Model.Id</p>
+        </div>
+    }
+</div>

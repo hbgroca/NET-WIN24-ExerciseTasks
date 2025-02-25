@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+    
+</head>
+<body>
+    <header class="container">
+        <nav class="navbar">
+
+            <div class="leftside">
+                <img src="./image/dice-target.png" alt="">
+                <h1>Slumpomatorn 9000</h1>
+                <h6 class="usertext">Användare: Anonym - 0 poäng</h6>
+            </div>
+            <div class="rightside">
+                <div>
+                    <div class="settings">
+                        <p>Högsta nummer: </p>
+                        <input class="HighestNumber" type="number" name="" id="" value="1000" min="1" max="100000000">
+                    </div>
+                    <div class="settings">
+                        <p>Antal försök: </p>
+                        <input class="TriesNumber" type="number" name="" id="" value="10" min="1" max="1000">
+                    </div>
+                </div>
+                <button class="btn btn-start" onclick="startGame()">Starta</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div>
+                <!-- <ul class="highscore"></ul> -->
+            </div>
+            <div class="hero container">
+                <div class="blur-bg">
+                    <div class="card-newhighscore">
+                        <h2>Grattis!</h2>
+                        <p>Du har satt ett nytt personligt rekord</p>
+                        <input class="inputUsername" type="text" placeholder="Namn" value="">
+                        <div>
+                            <button class="btn btn-cancel" onclick="cancelSave()">Avbryt</button>
+                            <button class="btn btn-save" onclick="saveHighscore()">Spara</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-leftside">
+                    <div class="card-guesses">
+                        <h4>Tidigare gissnignar</h4>
+                        <ul class="previusGuesses">
+                        </ul>
+                    </div>
+                </div>
+                <div class="hero-rightside">
+                    <div class="card-inputside">
+                        <div class="status">
+                            <h4>Nu kör vi!</h4>
+                            <p>Knappa in ditt första försök</p>
+                            <p>Du har <span class="guesses-left">X</span> försök kvar</p>
+                        </div>
+    
+                        <input class="inputValue" type="number" name="0" value="0" id="" min="0">
+    
+                        <div class="keypad">
+                            <div>
+                                <button class="btn" onclick="numpadClicked(1)">1</button>
+                                <button class="btn" onclick="numpadClicked(2)">2</button>
+                                <button class="btn" onclick="numpadClicked(3)">3</button>
+                            </div>
+
+                            <div>
+                                <button class="btn" onclick="numpadClicked(4)">4</button>
+                                <button class="btn" onclick="numpadClicked(5)">5</button>
+                                <button class="btn" onclick="numpadClicked(6)">6</button>
+                            </div>
+
+                            <div>
+                                <button class="btn" onclick="numpadClicked(7)">7</button>
+                                <button class="btn" onclick="numpadClicked(8)">8</button>
+                                <button class="btn" onclick="numpadClicked(9)">9</button>
+                            </div>
+                            <div id="keypad-lower">
+                                <button class="btn" onclick="numpadClicked('C')">C</button>
+                                <button class="btn" onclick="numpadClicked(0)">0</button>
+                                <button id="Enter" class="btn" onclick="numpadClicked('Enter')">Enter</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-fail">
+                        <h4>Du misslyckades!</h4>
+                        <p>Det rätta svaret var: <span class="card-fail-correctAnswer">X</span></p>
+                        <button class="btn btn-restart" onclick="startGame()">Försök igen</button>
+                    </div>
+                    <div class="card-win">
+                        <h4>Yay !</h4>
+                        <p>Du klarade det på <span class="card-win-guesses">X</span> försök</p>
+                        <p>Det rätta svaret var</p>
+                        <span class="card-win-correctAnswer">X</span>
+                        <p>Du fick ihop <span class="win-score">X</span> poäng</p>
+                        <button class="btn btn-restart" onclick="startGame()">Prova igen</button>
+                    </div>
+                </div> 
+            </div>
+            <div class="highscores container">
+                <div class="card-highscore">
+                    <a class="platsilistan" href="#">Min pos</a>
+                    <h4>Top lista</h4>
+                    <ul class="highscore-list">
+                        
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./js/main.js"></script>
+</body>
+</html>

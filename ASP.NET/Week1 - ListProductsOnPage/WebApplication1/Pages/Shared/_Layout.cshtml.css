@@ -1,0 +1,17 @@
+﻿.links {
+  display: flex;
+  justify-content:center;
+  gap:1rem;
+  a{
+     font-size:20px;
+
+   }
+}
+
+main{
+  margin: 0 auto;
+}
+
+footer{
+  margin:auto;
+}

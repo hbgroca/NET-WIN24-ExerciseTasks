@@ -1,0 +1,23 @@
+﻿@page
+@model WebApplication1.Pages._ProductsModel
+@{
+    ViewData["Title"] = "Products";
+}
+
+<section id="products">
+    <div class="container">
+        @if (!Model.Products.Any())
+        {
+            <p>Inga produkter hittades.</p>
+        }
+        else
+        {
+            <div class="products">
+                @foreach (var product in Model.Products)
+                {
+                    @await Html.PartialAsync("Partials/_ProductPartial", product)
+                }
+            </div>
+        }
+    </div>
+</section>
