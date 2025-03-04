@@ -1,0 +1,29 @@
+﻿header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height:64px;
+  background-color:#222;
+
+  nav{
+       display:flex;
+       margin: auto;
+       gap:2rem;
+     }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  width: 100%;
+  padding:2rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 16px;
+  display:flex;
+  justify-content:center;
+  width: 100%;
+}

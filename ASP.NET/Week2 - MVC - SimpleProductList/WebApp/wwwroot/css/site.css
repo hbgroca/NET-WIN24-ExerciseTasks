@@ -1,0 +1,47 @@
+html {
+  background-color: black;
+  color: white;
+  font-family: monospace, 'Times New Roman';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  font-size: 1.75rem;
+  text-decoration:none;
+  color: white;
+
+  &:hover{
+           color:darkred;
+         }
+}
+
+body {
+  position:relative;
+  display: block;
+  min-height: 100dvh;
+}
+
+
+.assignment-container {
+  display: flex;
+  flex-direction: column;
+  gap:0.5rem;
+  ul {
+    padding-left: 2rem;
+  }
+
+  li{
+    font-size: 1.5em;
+  }
+}
+
+.product-container {
+  display: flex;
+  justify-content: center;
+  padding: 0 2rem;
+}

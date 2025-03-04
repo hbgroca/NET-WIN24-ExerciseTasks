@@ -1,0 +1,29 @@
+﻿.product {
+  display: flex;
+  color: white;
+  background-color: #222;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: solid 1px hotpink;
+  border-radius: .5em;
+  padding: 0 0 0.75rem 0;
+  width: 220px;
+  height: 330px;
+  overflow: hidden;
+
+  &:hover{
+           border-color:blue;
+           cursor:pointer;
+         }
+}
+
+
+
+.product-image {
+  width:220px;
+  height:220px;
+}
+.product-price {
+
+}

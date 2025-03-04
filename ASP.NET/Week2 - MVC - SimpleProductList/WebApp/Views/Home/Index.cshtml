@@ -1,0 +1,61 @@
+﻿<div class="assignment-container">
+    <div>
+        <h1 class="">Övningsuppgift 2</h1>
+        <h2 class="">Enkel produktlista med Partial View i MVC</h2>
+    </div>
+    <br />
+    <h2>Steg 1: Skapa en produktmodell</h2>
+    <ul>
+        <li>Skapa en MVC-applikation som visar en lista av produkter.</li>
+        <li>Använd en Partial View för att visa en enskild produkt.</li>
+    </ul>
+
+    <h2>Steg 2: Skapa en services-klass för att hantera produkter</h2>
+    <ul>
+        <li>Skapa en klass Product i mappen Models och den klassen ska innehålla ett Id, Name, och Price.</li>
+    </ul>
+
+    <h2>Steg 3: Registrera tjänsten i Program.cs</h2>
+    <ul>
+        <li>Skapa en klass ProductService i mappen Services. I denna klass ska det finnas en privat statisk lista av typen Product och lägg sedan in manuellt 3 olika produkter i listan.</li>
+        <li>Klassen ska även innehåll en metod som heter GetProducts som ska skicka tillbaka listan med produkter.</li>
+    </ul>
+
+    <h2>Steg 4: Skapa en Partial View för att visa en produkt</h2>
+    <ul>
+        <li>Lägg till denna rad i Program.cs för att göra ProductService tillgänglig i Dependency Injection (DI) och använd Singleton vid registreringen.</li>
+    </ul>
+
+    <h2>Steg 5: Skapa en Partial View för att visa en produktlista</h2>
+    <ul>
+        <li>I mappen Views/Shared skapa en katalog som heter Partials</li>
+        <li>I mappen Partials, skapa en partial view _ProductPartial.cshtml som har en model som är av typen Product.</li>
+        <li>Skriv sedan ut HTML kod som visar en &lt;div class="product"&gt; som innehåller namnet och priset.</li>
+    </ul>
+
+    <h2>Steg 6: Skapa en Controller för produkter</h2>
+    <ul>
+        <li>I mappen Partials, skapa en partial view _ProductListPartial.cshtml som har en model som är av typen IEnumerable&lt;Product&gt;.</li>
+        <li>Skriv sedan ut HTML kod som visar en &lt;div class="products"&gt; och i denna div ska det finnas en foreach-loop som loopar ut en produkt och stoppar in produkten i ProductPartial som en modell.</li>
+        <li>Det ska även finnas en if-sats som talar om att om det inte finns några produkter så ska den visa texten "Det finns inga produkter tillgängliga."</li>
+    </ul>
+
+    <h2>Steg 7: Skapa ny Vy för ProductList</h2>
+    <ul>
+        <li>I mappen Controllers, skapa en ny kontroller som heter ProductsController.</li>
+        <li>Koppla ihop så att ProductsController använder sig av ProductService.</li>
+        <li>Döp om din Index-metod till att heta ProductsList istället.</li>
+        <li>Spara produkterna som kommer fån GetProducts() i din ProductService till en variabel som du döper till products.</li>
+        <li>Skicka in products till din Vy.</li>
+    </ul>
+
+    <h2>Testa projektet</h2>
+    <ul>
+        <li>Skapa en ny vy som heter ProductList.cshtml</li>
+        <li>Lägg till HTML-kod i ProductsList.cshtml som listar ut listan med produkter från din model som är kopplat till sidan.</li>
+        <li>Kör applikationen och navigera till /products.</li>
+        <li>Se listan över befintliga produkter.</li>
+    </ul>
+
+    <h2>Lycka till!</h2>
+</div>
