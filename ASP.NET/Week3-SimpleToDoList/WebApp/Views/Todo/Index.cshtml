@@ -1,0 +1,29 @@
+﻿@model ToDoViewModel
+
+<div class="todo-wrapper">
+    <div class="todo-registration">
+        <h2>ToDo</h2>
+        <div>
+            <form class="d-flex w-100 gap-2" asp-controller="ToDo" asp-action="Index" method="post" novalidate>
+                <div class="d-flex flex-column g-2 w-100">
+                    <input asp-for="toDoRegistrationForm.Title" />
+                    <span asp-validation-for="toDoRegistrationForm.Title"></span>
+                </div>
+                <button type="submit">Add</button>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        @if(Model.toDoModels.Count() == 0)
+        {
+            <p class="todo-list p-4">There's nothing on your todo list. Add an new todo !</p>
+        }
+        else
+        {
+            @await Html.PartialAsync("Partials/_ToDoListPartial", Model.toDoModels)
+        }
+    </div>
+
+    
+</div>

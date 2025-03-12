@@ -1,0 +1,29 @@
+﻿@model ToDoModel
+
+<div class="todo-item">
+    <p>@Model.Title</p>
+    <form asp-action="Update" method="post" id="updateForm-@Model.Id">
+        <input 
+            type="hidden" 
+            name="id" 
+            value="@Model.Id" 
+            />
+        <input 
+            name="IsCompleted" 
+            class="input-field" 
+            type="checkbox" @(Model.IsCompleted ? "checked" : "") 
+            value="true" 
+            onchange="this.form.submit()" 
+            />
+    </form>
+    <form asp-action="Delete" method="post">
+        <input 
+            type="hidden" 
+            name="id" 
+            value="@Model.Id" 
+            />
+        <button 
+            type="submit">Delete
+        </button>
+    </form>
+</div>

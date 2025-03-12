@@ -1,0 +1,17 @@
+﻿@model IEnumerable<ToDoModel>
+
+<div class="todo-list">
+    <ul>
+        <li class="todo-list-header">
+            <p>Description</p>
+            <p>Completed</p>
+            <p>Delete</p>
+        </li>
+        @foreach (ToDoModel todo in Model)
+        {
+            <li>
+                @await Html.PartialAsync("Partials/_ToDoPartial", todo)
+            </li>
+        }
+    </ul>
+</div>
